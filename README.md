@@ -22,9 +22,11 @@ This RFC proposes to introduce a new form of visibility scoping to PHP in the fo
 Visibility refers to the scope within which properties, methods, and constants of a class, as well as functions, variables, constants and both classes and interfaces themselves can be accessed. Visibility controls access levels to these elements and ensures encapsulation, enhancing security and modularity in code.
 
 ### Why Do We Need File-Scoped Visibility in PHP?
-- **File-scoped visibility**, proposed to be implemented using the TBD keyword, addresses several critical needs in PHP development:
+**File-scoped visibility**, proposed to be implemented using the TBD keyword, addresses several critical needs in PHP development:
 
 - **Encapsulation**: By restricting access to functions, variables, constants, classes, and interfaces within a single file, file-scoped visibility ensures better encapsulation. This prevents unintended interactions with other parts of the codebase and maintains a clear separation of concerns.
+
+- **Alternate to Static Classes**: There are many PHP developers who actively dislike seeing `static` classes used as an alternate to namespaces, but many developers continue to use `static` classes in that manner because `static` classes allow for reducing the visibility of a long-lived variable to within that class. Adding TDB keyword support would give developers a viable alternative to using `static` classes for encapsulation.
 
 - **Reduced Naming Conflicts**: As projects grow, the risk of naming conflicts increases. File-scoped visibility prevents global namespace pollution, allowing developers to use the same names in different files without conflict, thereby reducing the risk of accidental name collisions.
 
