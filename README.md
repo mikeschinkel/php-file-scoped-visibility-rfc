@@ -12,21 +12,26 @@ PHP has a rich set of visibility-scoping capabilities for class members in the f
 
 PHP also has _(legacy)_ global variables which can be introduced as visible into the scope of a function using the `global` keyword.
 
-PHP has the `namespace` keyword for enabling the developer to use organize related code, avoid name collisions, and enhance autoloading.  
+PHP has the `namespace` keyword for enabling the developer to organize related code, avoid name collisions, and enhance autoloading.  
 
-While PHP does not provide some visibility scoping mechanisms fo class members from outside the class, and for variables inside of a function, PHP provides no visibility scoping mechanisms for functions, variables, constants, as well as classes and interfaces themselves, nor with respect to the classes, variables and constants within namespaces.
+What PHP does **_not_** provide is any visibility scoping mechanism for variables or constants declared outside of a `function` or `class`, nor for functions, classes or interfaces themselves, **_collectively referred to as "symbols"_** for the rest of this RFC.
 
-This RFC proposes to introduce a new form of visibility scoping to PHP in the form of a To Be Determined (TBD) keyword that, if adopted will impart visibility of functions, variables, constants, classes, and interfaces declared with the TBD keyword to be visible only within the file, and nowhere else.
+And specifically regarding namespaces, PHP also does not provide any way for developers to limit the access of symbols declared inside a `namespace` from outside the `namespace`.
+
+This RFC proposes to introduce a new form of visibility scoping to PHP in the form of a **TBD keyword** that, if adopted will impart visibility of symbols declared with the selected keyword to be visible only within the file, and nowhere else.
+
+Note: **_TBD_** means **_"To Be Determined"_** either by RFC vote, or by overwhelming consensus before the RFC vote begins.
 
 ### Defining "Visibility" in PHP
-Visibility refers to the scope within which properties, methods, and constants of a class, as well as functions, variables, constants and both classes and interfaces themselves can be accessed. Visibility controls access levels to these elements and ensures encapsulation, enhancing security and modularity in code.
+Visibility refers to the scope within which symbols can be accessed. Visibility controls access levels to these elements and ensures encapsulation, enhancing security and modularity in code.
 
 ### Why Do We Need File-Scoped Visibility in PHP?
 **File-scoped visibility**, proposed to be implemented using the TBD keyword, addresses several critical needs in PHP development:
 
-- **Encapsulation**: By restricting access to functions, variables, constants, classes, and interfaces within a single file, file-scoped visibility ensures better encapsulation. This prevents unintended interactions with other parts of the codebase and maintains a clear separation of concerns.
+- **Encapsulation**: By restricting access to symbols within a single file, file-scoped visibility ensures better encapsulation. This prevents unintended interactions with other parts of the codebase and maintains a clear separation of concerns.
 
-- **Alternate to Static Classes**: There are many PHP developers who actively dislike seeing `static` classes used as an alternate to namespaces, but many developers continue to use `static` classes in that manner because `static` classes allow for reducing the visibility of a long-lived variable to within that class. Adding TDB keyword support would give developers a viable alternative to using `static` classes for encapsulation.
+- **Alternate to Static Classes**: There are many PHP developers who actively dislike seeing `static` classes used as an alternate to namespaces, but many other PHP developers continue to use `static` classes in that manner as `static` classes allow for reducing the visibility of a long-lived variable to within just the one class.
+    Adding a TDB keyword support would give developers a viable alternative to using `static` classes for encapsulation.
 
 - **Reduced Naming Conflicts**: As projects grow, the risk of naming conflicts increases. File-scoped visibility prevents global namespace pollution, allowing developers to use the same names in different files without conflict, thereby reducing the risk of accidental name collisions.
 
@@ -38,7 +43,7 @@ By addressing these needs, file-scoped visibility will help PHP developers creat
 
 ## Proposal
 
-File-Scoped Visibility with the proposed TBD keyword refers to a new visibility level where functions, variables, constants, classes, and interfaces are accessible _**only**_ within the file in which they are declared. This enhances modularity and prevents unintended access from outside the file, ensuring better encapsulation and separation of concerns.
+File-Scoped Visibility with the proposed TBD keyword refers to a new visibility level where symbols are accessible _**only**_ within the file in which they are declared. This enhances modularity and prevents unintended access from outside the file, ensuring better encapsulation and separation of concerns.
 
 
 ### Example Usages of TBD keyword
@@ -258,7 +263,7 @@ The TBD keyword introduces file-scoped visibility, which determines the scope of
      }
      ```
 
-The TBD keyword provides a way to declare file-scoped functions, variables, constants, classes, interfaces, and within namespaces for same. TBD is not applicable for class properties, class methods, global scope elements, or on namespaces. This targeted applicability ensures clear and consistent use of file-scoped visibility, enhancing code modularity and encapsulation.
+The TBD keyword provides a way to declare file-scoped symbols and within namespaces for same. TBD is not applicable for class properties, class methods, global scope elements, or on namespaces. This targeted applicability ensures clear and consistent use of file-scoped visibility, enhancing code modularity and encapsulation.
 
 ## Prior Art
 
@@ -540,7 +545,7 @@ The introduction of file-scoped visibility using the TBD keyword will have vario
     - The introduction of the TBD keyword will require it to be added as a reserved keyword in PHP. This means that any existing code using TBD keyword as an identifier (e.g., variable names, function names) will need to be updated. A thorough analysis will be required to determine the extent of this impact on existing codebases.
 
 2. **New Keyword Addition**:
-    - The addition of the TBD keyword introduces a new way to declare functions, variables, constants, classes, and interfaces with file-level scope. This will require updates to the PHP parser, lexer, and documentation to accommodate the new keyword and its usage.
+    - The addition of the TBD keyword introduces a new way to declare symbols with file-level scope. This will require updates to the PHP parser, lexer, and documentation to accommodate the new keyword and its usage.
 
 3. **Enhanced Modularity**:
     - Developers will have the ability to create more modular and encapsulated code by restricting the scope of certain elements to a single file. This promotes better organization and security within PHP projects.
@@ -595,5 +600,5 @@ Options considered, in reverse order of author preference:
 3. Can TBD-declared variables be implemented in a more performant manner and require less memory than regular PHP variables by following any _(additional)_ constraints?
 
 ## Conclusion
-The addition of file-scoped visibility using the TBD keyword will provide PHP developers with a powerful tool for better encapsulation, modularity, and security. By clearly defining and restricting the scope of functions, variables, constants, classes, and interfaces to the file level, this feature will help maintain clean and maintainable codebases.
+The addition of file-scoped visibility using the TBD keyword will provide PHP developers with a powerful tool for better encapsulation, modularity, and security. By clearly defining and restricting the scope of symbols to the file level, this feature will help maintain clean and maintainable codebases.
 
