@@ -1,4 +1,4 @@
-#PHP RFC: File Scoping
+# PHP RFC: File Scoping
 
 - Version: 0.1
 - Date: 2024-06-29
