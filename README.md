@@ -108,29 +108,29 @@ echo LOCAL_CONSTANT;        // Throws an error — TBD constants
 #### TBD Class
 ```php 
 <?php // example.php
-tbd class TBDClass {
+tbd class TbdClass {
     public function getMessage() {
         return 'Class is file-scoped';
     }
 }
 
 // Accessible within this file
-$tbdClass = new TBDClass();
+$tbdClass = new TbdClass();
 echo $tbdClass->getMessage(); // Outputs: Class is file-scoped
 
-function newTBDClass() {
-   // TBDClass being file-scoped means it is visibly across
+function newTbdClass() {
+   // TbdClass being file-scoped means it is visibly across
    // entire file, including within a function or class method.
-   return new TBDClass();
+   return new TbdClass();
 }
 ```
 
 ```php 
 <?php 
 require('example.php');
-$c1 = newTBDClass();
+$c1 = newTbdClass();
 $c1->getMessage();          // Outputs: Class is file-scoped
-$c2 = new TBDClass();       // Throws an error — TBD classes 
+$c2 = new TbdClass();       // Throws an error — TBD classes 
                             // not visible outside declaring file
 ```
 #### TBD Interface
@@ -472,7 +472,7 @@ Clipper, an older programming language, initially had only dynamic variables, wh
    ```
  Clipper is included here not because the language is well-known but because the author of this RFC [once wrote a book on it](ww.amazon.com/Programming-Clipper-5-Version-5-01/dp/0201570181) in a former life and its distinction from Clipper's `PRIVATE` type of variable is in part what inspired the ideas of this RFC.
 
-### Summary
+### Summary of Prior Art
 
 The concept of file-scoped or localized visibility is a common feature in many programming languages, each with its unique syntax and implementation:
 
@@ -488,7 +488,7 @@ The concept of file-scoped or localized visibility is a common feature in many p
 - **TypeScript**: Uses ES6 module syntax to scope elements to the file unless exported.
 - **Clipper**: Initially had only dynamic variables, later introduced `LOCAL` keyword for procedure-level scope.
 
-These implementations provide valuable insights into how PHP can introduce file-scoped visibility using the `fileonly` keyword, drawing from established practices in other languages.
+These implementations provide valuable insights into how PHP can introduce file-scoped visibility using the TBD keyword, drawing from established practices in other languages.
 
 
 ## Compile-Time Concepts and Optimization
@@ -576,16 +576,16 @@ The introduction of file-scoped visibility using the TBD keyword will have vario
 
 By explicitly addressing the areas with no impact and outlining the areas with definite impacts, this RFC aims to provide a comprehensive understanding of how the introduction of file-scoped visibility will affect PHP development. This ensures transparency and prepares developers and tool maintainers for the adoption of the new feature.
 
-## Keyword Choices
+## Keyword Choices for TDB Keyword
 
 Options considered, in reverse order of author preference:
 
 1. `var` — An existing reserverd word — deprecated for other uses — but only makes sense for variables. This would be perfect for variables with file-only visibility, but as it does not apply to any other symbol type `var` appear to be a non-starter. 
 2. `private` — An existing reserved word, but has the potential for too confusion with other uses of `private`.
-3. `internal` — Not an existing word so has an existing small impact, There are [583 uses](https://github.com/search?q=internal+language%3APHP+symbol%3A%2F%5Einternal%24%2F&type=code) of `/^internal$/` in symbols in PHP code on public GitHub. However `internal` might get confused with being related to PHP Internals somehow.
-4. `hidden` — Not an existing word so has an existing small impact, There are [approximate 1.5K uses](https://github.com/search?q=hidden+language%3APHP+symbol%3A%2F%hidden%24%2F&type=code) of `/^hidden$/` in symbols in PHP code on public GitHub. However, while its usage could learned, this is not a strong candidate as the symbols would not be hidden within the file, only outside of it. 
-5. `local` — Not an existing word so has an existing small impact, There are [approximate 2K uses](https://github.com/search?q=local+language%3APHP+symbol%3A%2F%5Elocal%24%2F&type=code) of `/^local$/` in symbols in PHP code on public GitHub. Ignoring the impact, the author believes `local` is a strong candidate for balancing conciseness and clarity, but can we ignore the impact?
-5. `fileonly` — Not an existing word but [only affects 1 file](https://github.com/search?q=fileonly+language%3APHP+symbol%3A%2F%5Efileonly%24%2F&type=code) when searching `/^fileonly$/` on public GitHub. `fileonly` is the most clear in its intent however its combined word form _might_ offputting by many developers.
+3. `internal` — Not an existing keyword so has an existing small impact, There are [583 uses](https://github.com/search?q=internal+language%3APHP+symbol%3A%2F%5Einternal%24%2F&type=code) of `/^internal$/` in symbols in PHP code on public GitHub. However `internal` might get confused with being related to PHP Internals somehow.
+4. `hidden` — Not an existing keyword so has an existing small impact, There are [approximate 1.5K uses](https://github.com/search?q=hidden+language%3APHP+symbol%3A%2F%hidden%24%2F&type=code) of `/^hidden$/` in symbols in PHP code on public GitHub. However, while its usage could learned, this is not a strong candidate as the symbols would not be hidden within the file, only outside of it. 
+5. `local` — Not an existing keyword so has an existing small impact, There are [approximate 2K uses](https://github.com/search?q=local+language%3APHP+symbol%3A%2F%5Elocal%24%2F&type=code) of `/^local$/` in symbols in PHP code on public GitHub. Ignoring the impact, the author believes `local` is a strong candidate for balancing conciseness and clarity, but can we ignore the impact?
+5. `fileonly` — Not an existing keyword but [only affects 1 file](https://github.com/search?q=fileonly+language%3APHP+symbol%3A%2F%5Efileonly%24%2F&type=code) when searching `/^fileonly$/` on public GitHub. `fileonly` is the most clear in its intent however its combined word form _might_ be off-putting to some developers, hence why this RFC plans to offer a choice.
 
 ## Conclusion
 The addition of file-scoped visibility using the TBD keyword will provide PHP developers with a powerful tool for better encapsulation, modularity, and security. By clearly defining and restricting the scope of functions, variables, constants, classes, and interfaces to the file level, this feature will help maintain clean and maintainable codebases.
