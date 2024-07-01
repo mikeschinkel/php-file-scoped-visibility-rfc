@@ -38,7 +38,7 @@ tbd function tbdFunction():string {
 }
 ```
 
-## Keyword Choices
+### Keyword Choices
 See [KEYWORD-CHOICES.md](KEYWORD-CHOICES.md)
 
 ### Example Usages 
