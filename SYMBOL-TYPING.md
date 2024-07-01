@@ -87,7 +87,7 @@ Now this can be used like so:
 <?php
 $p = include("my-package.php");
 $c = $p->newMyClass("foo");
-echo $c->value();                   // Outputs: My Value
+echo $c->value();                   // Outputs: foo
 ```
 #### Fully-qualified Names of File-scoped Classes
 Clearly, the code declaring `MyClass` and `MyPackage` from the prior section brings up an interesting concern; what value should `get_class()`, `get_called_class()` and similar functionality have?
