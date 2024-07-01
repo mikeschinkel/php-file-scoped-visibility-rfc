@@ -61,6 +61,7 @@ $c = include("my-package.php");
 echo $c->myProperty;            // Outputs: My Value
 ```
 
+#### Simulating Packages
 As an even more useful pattern, consider this example:
 
 ```php
