@@ -66,7 +66,7 @@ As an even more useful pattern, consider this example:
 
 ```php
 <?php // my-package.php
-class MyClass {
+tdb class MyClass {
 	private string $value;
 	public function __construct(string $value) {
 		$this->value = $value;
@@ -75,7 +75,7 @@ class MyClass {
 		return $this->value;
 	}
 }
-class MyPackage {
+tdb class MyPackage {
 	public function newMyClass(string $value):object {
 		return new MyClass($value);
 	}
