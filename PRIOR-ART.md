@@ -210,7 +210,7 @@ Clipper, an older programming language, initially had only dynamic variables, wh
    RETURN
 
    ```
-Clipper is included here not because the language is well-known but because the author of this RFC [once wrote a book on it](ww.amazon.com/Programming-Clipper-5-Version-5-01/dp/0201570181) in a former life and its distinction from Clipper's `PRIVATE` type of variable is in part what inspired the ideas of this RFC.
+Clipper is included here not because the language is well-known but because the author of this RFC [once wrote a book on it](https://www.amazon.com/Programming-Clipper-5-Version-5-01/dp/0201570181) in a former life and its distinction from Clipper's `PRIVATE` type of variable is in part what inspired the ideas of this RFC.
 
 ### Summary of Prior Art
 
