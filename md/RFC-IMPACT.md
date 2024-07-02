@@ -1,8 +1,8 @@
-## RFC Impact
+# RFC Impact
 
 The introduction of file-scoped visibility using the TBD keyword will have various impacts on PHP. This section outlines the expected changes and confirms that certain well-known areas of PHP will remain unaffected, as well as areas where there will be definite impacts.
 
-### Areas with No Impact
+## Areas with No Impact
 
 1. **Backward Compatibility**:
     - The addition of the TBD keyword will not affect existing codebases. All current code will continue to function as expected since this is an additive feature. Existing visibility keywords (`public`, `protected`, `private`) and their behavior remain unchanged.
@@ -22,7 +22,7 @@ The introduction of file-scoped visibility using the TBD keyword will have vario
 6. **PHP Standard Library (SPL)**:
     - The PHP Standard Library, including all its components and functions, will not be impacted by the introduction of file-scoped visibility. The SPL will continue to operate as it currently does without any changes.
 
-### Areas with Definite Impact
+## Areas with Definite Impact
 
 1. **Reserved Keywords**:
     - The introduction of the TBD keyword will require it to be added as a reserved keyword in PHP. This means that any existing code using TBD keyword as an identifier (e.g., variable names, function names) will need to be updated. A thorough analysis will be required to determine the extent of this impact on existing codebases.
@@ -42,7 +42,7 @@ The introduction of file-scoped visibility using the TBD keyword will have vario
 6. **Learning Curve**:
     - While the TBD keyword adds an additional concept for developers to learn, its benefits in terms of code organization and encapsulation justify the learning effort. Clear documentation and examples will help mitigate any initial learning curve.
 
-### Additional Areas of Impact
+## Additional Areas of Impact
 
 1. **Reflection API**:
     - **Impact**: File-scoped visibility should ideally be a compile-time concept and not participate in reflection. This means that elements declared with TBD would not be visible through reflection.

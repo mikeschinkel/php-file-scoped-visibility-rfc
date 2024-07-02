@@ -1,8 +1,8 @@
-### Valid and Invalid Uses 
+# Valid and Invalid Uses 
 
 The TBD keyword introduces file-scoped visibility, which determines the scope of various elements within a PHP file. This section outlines where the TBD keyword will be valid and where it will not be applicable, based on the type of symbol being qualified.
 
-#### Valid Uses
+## Valid Uses
 
 1. **Functions**
     - **Valid**: The TBD keyword can be used to declare functions that are only accessible within the file where they are defined.
@@ -63,7 +63,7 @@ The TBD keyword introduces file-scoped visibility, which determines the scope of
       }
        ```
 
-#### Invalid uses
+## Invalid uses
 
 1. **Class Properties and Methods**
     - **Not Valid**: The TBD keyword cannot be used to declare properties or methods within a class. Class properties and methods are governed by the existing visibility keywords (`public`, `protected`, `private`).

@@ -1,5 +1,5 @@
-### Example Usages of TBD keyword
-#### Tbd Function
+# Example Usages of TBD keyword
+## TBD Function
 ```php 
 <?php // example.php
 tbd function tbdFunction():string {
@@ -17,7 +17,7 @@ echo tbdFunction();         // Throws an error — TBD functions
                             // not visible outside declaring file
 ```
 
-#### TBD Variable
+## TBD Variable
 ```php 
 <?php // example.php
 tbd string $tbdVariable = 'Variable is file-scoped';
@@ -41,7 +41,7 @@ echo $tbdVariable;          // Throws an error — TBD variables
  
 ```
 
-#### TBD Constant
+## TBD Constant
 ```php 
 <?php // example.php
 tbd const LOCAL_CONSTANT = 'Constant is file-scoped';
@@ -64,7 +64,7 @@ echo LOCAL_CONSTANT;        // Throws an error — TBD constants
                             // not visible outside declaring file
 ```
 
-#### TBD Class
+## TBD Class
 ```php 
 <?php // example.php
 tbd class TbdClass {
@@ -92,7 +92,7 @@ $c1->getMessage();          // Outputs: Class is file-scoped
 $c2 = new TbdClass();       // Throws an error — TBD classes 
                             // not visible outside declaring file
 ```
-#### TBD Interface
+## TBD Interface
 ```php 
 <?php // example.php
 tbd interface TBDInterface {
@@ -108,7 +108,6 @@ tbd class ImplementingClass implements TBDInterface {
 // Accessible within this file
 $instance = new ImplementingClass();
 echo $instance->getIt();    // Outputs: Interface is file-scoped
-
 ```
 
 ```php 
@@ -122,4 +121,3 @@ class MyClass implements TBDInterface {
     }
 }
 ```
-~~~~

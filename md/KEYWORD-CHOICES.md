@@ -1,4 +1,4 @@
-### Keyword Choices
+# Keyword Choices
 
 Options considered, in reverse order of author preference:
 
