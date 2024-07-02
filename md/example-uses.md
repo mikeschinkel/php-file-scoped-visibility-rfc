@@ -1,105 +1,105 @@
-# Example Usages of TBD keyword
-## TBD Function
+# Example Usages of `fileonly` keyword
+## Functions
 ```php 
 <?php // example.php
-tbd function tbdFunction():string {
+fileonly function exampleFunction():string {
     return 'Function is file-scoped';
 }
 
 // Accessible within this file
-echo tbdFunction();         // Outputs: Function is file-scoped
+echo exampleFunction();  // Outputs: Function is file-scoped
 ```
 
 ```php 
 <?php 
 require('example.php');
-echo tbdFunction();         // Throws an error — TBD functions 
-                            // not visible outside declaring file
+echo exampleFunction();  // Throws an error — FileOnly functions 
+                         // not visible outside declaring file
 ```
 
-## TBD Variable
+## Variables
 ```php 
 <?php // example.php
-tbd string $tbdVariable = 'Variable is file-scoped';
+fileonly string $exampleVariable = 'Variable is file-scoped';
 
 // Accessible within this file
-echo $tbdVariable();        // Outputs: Variable is file-scoped
+echo $exampleVariable();  // Outputs: Variable is file-scoped
 
-function getTbdVariable() {
-   // $tbdVariable being file-scoped means it is visibly across
-   // entire file, including within a function or class method.
-   return $tbdVariable;
+function getExampleVariable() {
+   // $exampleVariable is file-scoped and visibly across
+   // entire file, including within function and class method.
+   return $exampleVariable;
 }
 ```
 
 ```php 
 <?php 
 require('example.php');
-echo getTbdVariable();      // Outputs: Variable is file-scoped
-echo $tbdVariable;          // Throws an error — TBD variables 
+echo getExampleVariable();  // Outputs: Variable is file-scoped
+echo $exampleVariable;      // Throws an error — FileOnly variables 
                             // not visible outside declaring file
  
 ```
 
-## TBD Constant
+## Constants
 ```php 
 <?php // example.php
-tbd const LOCAL_CONSTANT = 'Constant is file-scoped';
+fileonly const EXAMPLE_CONSTANT = 'Constant is file-scoped';
 
 // Accessible within this file
-echo LOCAL_CONSTANT;        // Outputs: Constant is file-scoped
+echo EXAMPLE_CONSTANT;      // Outputs: Constant is file-scoped
 
-function get_LOCAL_CONSTANT() {
-   // LOCAL_CONSTANT being file-scoped means it is visibly across
+function get_EXAMPLE_CONSTANT() {
+   // EXAMPLE_CONSTANT being file-scoped means it is visibly across
    // entire file, including within a function or class method.
-   return LOCAL_CONSTANT;
+   return EXAMPLE_CONSTANT;
 }
 ```
 
 ```php 
 <?php 
 require('example.php');
-echo get_LOCAL_CONSTANT();  // Outputs: Constant is file-scoped
-echo LOCAL_CONSTANT;        // Throws an error — TBD constants 
-                            // not visible outside declaring file
+echo get_EXAMPLE_CONSTANT(); // Outputs: Constant is file-scoped
+echo EXAMPLE_CONSTANT;       // Throws an error — FileOnly constants 
+                             // not visible outside declaring file
 ```
 
-## TBD Class
+## Classes
 ```php 
 <?php // example.php
-tbd class TbdClass {
+fileonly class ExampleClass {
     public function getMessage():string {
         return 'Class is file-scoped';
     }
 }
 
 // Accessible within this file
-$tbdClass = new TbdClass();
-echo $tbdClass->getMessage(); // Outputs: Class is file-scoped
+$exampleClass = new ExampleClass();
+echo $exampleClass->getMessage(); // Outputs: Class is file-scoped
 
-function newTbdClass() {
-   // TbdClass being file-scoped means it is visibly across
+function newExampleClass() {
+   // ExampleClass being file-scoped means it is visibly across
    // entire file, including within a function or class method.
-   return new TbdClass();
+   return new ExampleClass();
 }
 ```
 
 ```php 
 <?php 
 require('example.php');
-$c1 = newTbdClass();
+$c1 = newExampleClass();
 $c1->getMessage();          // Outputs: Class is file-scoped
-$c2 = new TbdClass();       // Throws an error — TBD classes 
+$c2 = new ExampleClass();   // Throws an error — FileOnly classes 
                             // not visible outside declaring file
 ```
-## TBD Interface
+## Interfaces
 ```php 
 <?php // example.php
-tbd interface TBDInterface {
+fileonly interface ExampleInterface {
     public function getIt();
 }
 
-tbd class ImplementingClass implements TBDInterface {
+fileonly class ImplementingClass implements ExampleInterface {
     public function getIt():string {
         return 'Interface is file-scoped';
     }
@@ -113,9 +113,9 @@ echo $instance->getIt();    // Outputs: Interface is file-scoped
 ```php 
 <?php 
 require('example.php');
-// Throws an error — TBD interfaces not visible outside 
+// Throws an error — FileOnly interfaces not visible outside 
 // declaring file
-class MyClass implements TBDInterface {
+class MyClass implements ExampleInterface {
     public function getIt():string {
         return 'This class cannot be declared';
     }

@@ -228,5 +228,5 @@ The concept of file-scoped or localized visibility is a common feature in many p
 - **TypeScript**: Uses ES6 module syntax to scope elements to the file unless exported.
 - **Clipper**: Initially had only dynamic variables, later introduced `LOCAL` keyword for procedure-level scope.
 
-These implementations provide valuable insights into how PHP can introduce file-scoped visibility using the TBD keyword, drawing from established practices in other languages.
+These implementations provide valuable insights into how PHP can introduce file-scoped visibility using the `fileonly` keyword, drawing from established practices in other languages.
 

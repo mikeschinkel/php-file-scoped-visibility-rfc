@@ -1,4 +1,4 @@
-# Keyword Choices
+# Keyword Choices Considered
 
 Options considered, in reverse order of author preference:
 
@@ -8,3 +8,5 @@ Options considered, in reverse order of author preference:
 4. `hidden` — Not an existing keyword so has an existing small impact, There are [approximate 1.5K uses](https://github.com/search?q=hidden+language%3APHP+symbol%3A%2F%hidden%24%2F&type=code) of `/^hidden$/` in symbols in PHP code on public GitHub. However, while its usage could learned, this is not a strong candidate as the symbols would not be hidden within the file, only outside of it.
 5. `local` — Not an existing keyword so has an existing small impact, There are [approximate 2K uses](https://github.com/search?q=local+language%3APHP+symbol%3A%2F%5Elocal%24%2F&type=code) of `/^local$/` in symbols in PHP code on public GitHub. Ignoring the impact, the author believes `local` is a strong candidate for balancing conciseness and clarity, but can we ignore the impact?
 5. `fileonly` — Not an existing keyword but [only affects 1 file](https://github.com/search?q=fileonly+language%3APHP+symbol%3A%2F%5Efileonly%24%2F&type=code) when searching `/^fileonly$/` on public GitHub. `fileonly` is the most clear in its intent however its combined word form _might_ be off-putting to some developers, hence why this RFC plans to offer a choice.
+
+The choice of which keyword to use is not finalized for this RFC so if collaborates provide good arguments to an alternate keyword besides `fileonly` that change could be make.

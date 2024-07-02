@@ -10,6 +10,4 @@ What PHP does **_not_** provide is any visibility scoping mechanism for variable
 
 And specifically regarding namespaces, PHP also does not provide any way for developers to limit the access of symbols declared inside a `namespace` from outside the `namespace`.
 
-This RFC proposes to introduce a new form of visibility scoping to PHP in the form of a **TBD keyword** that, if adopted will impart visibility of symbols declared with the selected keyword to be visible only within the file, and nowhere else.
-
-Note: **_TBD_** means **_"To Be Determined"_** either by RFC vote, or by overwhelming consensus before the RFC vote begins.
+This RFC proposes to introduce a new form of visibility scoping to PHP in the form of a **`fileonly` keyword** that, if adopted will impart visibility of symbols declared with the selected keyword to be visible only within the file, and nowhere else.

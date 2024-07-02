@@ -2,7 +2,7 @@
 Visibility refers to the scope within which symbols can be accessed. Visibility controls access levels to these elements and ensures encapsulation, enhancing security and modularity in code.
 
 ## Why Do We Need File-Scoped Visibility in PHP?
-**File-scoped visibility**, proposed to be implemented using the TBD keyword, addresses several critical needs in PHP development:
+**File-scoped visibility**, proposed to be implemented using the `fileonly` keyword, addresses several critical needs in PHP development:
 
 - **Encapsulation**: By restricting access to symbols within a single file, file-scoped visibility ensures better encapsulation. This prevents unintended interactions with other parts of the codebase and maintains a clear separation of concerns.
 
