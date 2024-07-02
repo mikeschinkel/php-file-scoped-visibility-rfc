@@ -6,7 +6,6 @@
 - Status: **ROUGH DRAFT**
 - First Published at: https://github.com/mikeschinkel/php-file-scoped-visibility-rfc
 
-
 ## Defining "Visibility" in PHP
 Visibility refers to the scope within which symbols can be accessed. Visibility controls access levels to these elements and ensures encapsulation, enhancing security and modularity in code.
 
