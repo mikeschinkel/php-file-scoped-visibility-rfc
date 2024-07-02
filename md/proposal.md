@@ -11,17 +11,17 @@ tbd function tbdFunction():string {
 }
 ```
 
-[include](./keyword-choices.md)
+[merge](./keyword-choices.md)
 
-[include](./example-uses.md)
+[merge](./example-uses.md)
 
-[include](./symbol-typing.md)
+[merge](./symbol-typing.md)
 
-[include](./valid-invalid-uses.md)
+[merge](./valid-invalid-uses.md)
 
-[include](./prior-art.md)
+[merge](./prior-art.md)
 
-[include](./compile-time.md)
+[merge](./compile-time.md)
 
-[include](./conclusion.md)
+[merge](./conclusion.md)
 

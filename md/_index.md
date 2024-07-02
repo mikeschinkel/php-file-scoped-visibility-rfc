@@ -7,13 +7,13 @@
 - First Published at: https://github.com/mikeschinkel/php-file-scoped-visibility-rfc
 
 
-[include](./visibility.md)
+[merge](./visibility.md)
 
-[include](./proposal.md)
+[merge](./proposal.md)
 
-[include](./rfc-impact.md)
+[merge](./rfc-impact.md)
 
-[include](./open-questions.md)
+[merge](./open-questions.md)
 
 
 ## Remember, this is still a ROUGH DRAFT
