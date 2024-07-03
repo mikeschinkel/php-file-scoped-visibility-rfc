@@ -12,11 +12,5 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Print workspace path
-        run: |
-          echo "Workspace directory: ${{ github.workspace }}"
-          find .
-
       - name: Generate README
         uses: mikeschinkel/readme-merge@main
-
