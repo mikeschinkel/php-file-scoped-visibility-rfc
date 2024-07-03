@@ -18,8 +18,6 @@ jobs:
 
       - name: Print workspace path
         run: |
-        	echo "Workspace directory: ${{ github.workspace }}"
-           	find .
-          	tree
-
-
+          echo "Workspace directory: ${{ github.workspace }}"
+          find .
+          tree
