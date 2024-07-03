@@ -11,13 +11,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
-          sparse-checkout-cone-mode: false
-          sparse-checkout: |
-            README.md
-            md
-            md/**
 
       - name: Generate README
         uses: mikeschinkel/readme-merge@0.0.10
