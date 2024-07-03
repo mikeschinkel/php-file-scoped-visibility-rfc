@@ -20,4 +20,4 @@ jobs:
             md/**
 
       - name: Generate README
-        uses: mikeschinkel/readme-merge@0.0.9
+        uses: mikeschinkel/readme-merge@0.0.10
