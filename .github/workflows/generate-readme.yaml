@@ -13,4 +13,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Generate README
-        uses: mikeschinkel/readme-merge@0.0.7
+        uses: mikeschinkel/readme-merge@0.0.8
