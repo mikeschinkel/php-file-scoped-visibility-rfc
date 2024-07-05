@@ -4,7 +4,7 @@ If the RFC is adopted then the concept of file-scoped or localized visibility wi
 
 This section explores how different languages have approached similar concepts, including the syntax they use and their specific implementations.
 
-**NOTE: This section was written with the help of ChatGPT since the author is not an expert in all languages so if there are errors you recognize please submit a pull request with a correction.**
+**NOTE: This section was written with the help of ChatGPT as the author is not an expert in all these languages. If there are any errors you recognize please submit a pull request with a correction** _or at least create an issue and describe what is incorrect and how to fix it._
 
 ## 1. **C/C++**
 
