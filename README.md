@@ -422,16 +422,16 @@ In Python, file-scoped variables and functions are achieved using module-level s
 
 - **Syntax**:
    ```py
-   # file_scoped_module.py
+##   # file_scoped_module.py
    _file_scoped_variable = 0  # Via Python convention, a leading underscore 
                               # indicates intended module-private scope
    
    def _file_scoped_function():
-   # Function is file-scoped
+##   # Function is file-scoped
    pass
    
    class _FileScopedClass:
-   # Class is file-scoped
+##   # Class is file-scoped
    pass
    ```
 
@@ -490,7 +490,7 @@ By defining variables, methods, and classes within a Ruby module and not includi
       # Class is file-scoped
     end
   end
-  # Not including FileScopedModule in any other context keeps it file-scoped
+##  # Not including FileScopedModule in any other context keeps it file-scoped
   ```
 
 #### 7. **Kotlin**
