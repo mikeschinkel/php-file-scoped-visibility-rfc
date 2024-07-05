@@ -1,7 +1,7 @@
 # PHP RFC: File-scoped Visibility
 
 - Version: 0.1
-- Date: 2024-06-29
+- Dates: 2024-06-29 to 2024-07-05
 - Author: Mike Schinkel <mike@newclarity.net>
 - Status: **ROUGH DRAFT**
 - First Published at: https://github.com/mikeschinkel/php-file-scoped-visibility-rfc
@@ -710,5 +710,8 @@ Note: Anything that is discovered as problematic during implementation that if d
 
 2. Can `fileonly`-declared variables be implemented in a more performant manner and require less memory than regular PHP variables by following any _(additional)_ constraints, even is the optimizing implementation is postponed to a future RFC? 
 
+## Other Thoughts
+
+- [Discussion with Chuck Adams](https://gist.github.com/chuckadams/f25f3324e1a116c0bea2d2fec1f5a231)
 
 # Remember, this is still a ROUGH DRAFT
