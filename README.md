@@ -393,11 +393,11 @@ In C and C++, file-scoped variables and functions are achieved using the `static
   ```c
   // file1.c
   static int fileScopedVariable = 0;
-
+  
   static void fileScopedFunction() {
       // Function is file-scoped
   }
-
+  ```
 
 #### 2. **JavaScript (ES6 Modules)**
 JavaScript ES6 introduced modules, which allow variables, functions, and classes to be scoped to a single file. By default, any declaration within a module is scoped to that module unless explicitly exported.
@@ -405,15 +405,15 @@ JavaScript ES6 introduced modules, which allow variables, functions, and classes
   ```javascript
   // fileScopedModule.js
   let fileScopedVariable = 0;
-
+  
   function fileScopedFunction() {
       // Function is file-scoped
   }
-
+  
   class FileScopedClass {
       // Class is file-scoped
   }
-
+  
   // Exported items are accessible outside the file
   export { fileScopedVariable, fileScopedFunction, FileScopedClass };
    ```
@@ -422,16 +422,16 @@ In Python, file-scoped variables and functions are achieved using module-level s
 
 - **Syntax**:
    ```py
-##   # file_scoped_module.py
+   # file_scoped_module.py
    _file_scoped_variable = 0  # Via Python convention, a leading underscore 
                               # indicates intended module-private scope
    
    def _file_scoped_function():
-##   # Function is file-scoped
+   # Function is file-scoped
    pass
    
    class _FileScopedClass:
-##   # Class is file-scoped
+   # Class is file-scoped
    pass
    ```
 
@@ -490,7 +490,7 @@ By defining variables, methods, and classes within a Ruby module and not includi
       # Class is file-scoped
     end
   end
-##  # Not including FileScopedModule in any other context keeps it file-scoped
+  # Not including FileScopedModule in any other context keeps it file-scoped
   ```
 
 #### 7. **Kotlin**
