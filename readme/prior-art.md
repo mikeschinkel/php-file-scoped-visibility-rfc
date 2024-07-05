@@ -14,11 +14,11 @@ In C and C++, file-scoped variables and functions are achieved using the `static
   ```c
   // file1.c
   static int fileScopedVariable = 0;
-
+  
   static void fileScopedFunction() {
       // Function is file-scoped
   }
-
+  ```
 
 ## 2. **JavaScript (ES6 Modules)**
 JavaScript ES6 introduced modules, which allow variables, functions, and classes to be scoped to a single file. By default, any declaration within a module is scoped to that module unless explicitly exported.
@@ -26,15 +26,15 @@ JavaScript ES6 introduced modules, which allow variables, functions, and classes
   ```javascript
   // fileScopedModule.js
   let fileScopedVariable = 0;
-
+  
   function fileScopedFunction() {
       // Function is file-scoped
   }
-
+  
   class FileScopedClass {
       // Class is file-scoped
   }
-
+  
   // Exported items are accessible outside the file
   export { fileScopedVariable, fileScopedFunction, FileScopedClass };
    ```
