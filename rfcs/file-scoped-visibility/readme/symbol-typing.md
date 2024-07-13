@@ -51,7 +51,7 @@ Consider the following example:
 fileonly class MyClass {
    public $myProperty = "My Value";
 }
-return new MyClass();
+return new package\MyClass();
 ```
 Then it can be used like so:
 ```php 
@@ -77,7 +77,7 @@ tdb class MyClass {
 }
 tdb class MyPackage {
    public function newMyClass(string $value):object {
-      return new MyClass($value);
+      return new package\MyClass($value);
    }
 }
 return new MyPackage();
